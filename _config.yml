@@ -1,0 +1,15 @@
+title: Hana White
+markdown: kramdown
+kramdown:
+  input: GFM
+
+exclude:
+  - public
+  - README.md
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default

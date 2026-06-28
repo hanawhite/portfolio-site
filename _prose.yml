@@ -1,0 +1,39 @@
+siteurl: ""
+media: assets
+ignore:
+  - _layouts
+  - _config.yml
+  - _prose.yml
+  - public
+
+metadata:
+  "*.md":
+    - name: "title"
+      field:
+        element: "text"
+        label: "Page title"
+        required: true
+    - name: "nav_label"
+      field:
+        element: "text"
+        label: "Navigation label"
+        required: true
+    - name: "nav_order"
+      field:
+        element: "number"
+        label: "Navigation order"
+        required: true
+    - name: "permalink"
+      field:
+        element: "text"
+        label: "Permalink"
+        required: true
+    - name: "hero_variant"
+      field:
+        element: "select"
+        label: "Hero style"
+        options:
+          - name: "none"
+            value: ""
+          - name: "collage"
+            value: "collage"

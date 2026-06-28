@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Hana White</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              paper: "#f3f11c",
+              ink: "#121212",
+              accent: "#ef2e17",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="/assets/site.css" />
+    <style>
+      .collage-page {
+        --ratio: 1280 / 1050;
+        --cw: min(100vw, 100dvh * 1280 / 1050);
+
+        /* Element positions — desktop/landscape defaults */
+        --about-top: 2%;
+        --about-right: 3%;
+        --workshops-top: 8.3%;
+        --workshops-left: 5.8%;
+        --eyes-top: 28.1%;
+        --eyes-left: 54.1%;
+        --nose-top: 45.7%;
+        --nose-left: 3.4%;
+        --feedback-top: 43.8%;
+        --feedback-left: 43.5%;
+        --writing-top: 70%;
+        --writing-left: 4.8%;
+        --mouth-top: 80.4%;
+        --mouth-left: 54.1%;
+
+        /* Element sizes as fraction of container width */
+        --workshops-w: 0.462;
+        --eyes-w: 0.34;
+        --nose-w: 0.34;
+        --feedback-w: 0.463;
+        --writing-w: 0.388;
+        --mouth-w: 0.403;
+        --about-w: 0.134;
+        --headshot-w: 0.08;
+      }
+
+      .collage-page img {
+        height: auto;
+      }
+
+      /* Portrait / mobile — taller ratio, items spread vertically */
+      @media (max-aspect-ratio: 4/5) {
+        .collage-page {
+          --ratio: 3 / 5;
+          --cw: min(100vw, 100dvh * 3 / 5);
+
+          --about-top: 1%;
+          --workshops-top: 10%;
+          --workshops-left: 3%;
+          --eyes-top: 28%;
+          --eyes-left: 42%;
+          --nose-top: 44%;
+          --nose-left: 2%;
+          --feedback-top: 46%;
+          --feedback-left: 35%;
+          --writing-top: 68%;
+          --writing-left: 3%;
+          --mouth-top: 82%;
+          --mouth-left: 42%;
+
+          --workshops-w: 0.58;
+          --eyes-w: 0.5;
+          --nose-w: 0.5;
+          --feedback-w: 0.58;
+          --writing-w: 0.52;
+          --mouth-w: 0.52;
+          --about-w: 0.17;
+          --headshot-w: 0.1;
+        }
+      }
+
+      /* In-between — tablets in portrait, tall-ish windows */
+      @media (min-aspect-ratio: 4/5) and (max-aspect-ratio: 1/1) {
+        .collage-page {
+          --ratio: 4 / 4.2;
+          --cw: min(100vw, 100dvh * 4 / 4.2);
+
+          --workshops-top: 8%;
+          --eyes-top: 28%;
+          --nose-top: 46%;
+          --feedback-top: 44%;
+          --writing-top: 70%;
+          --mouth-top: 81%;
+
+          --workshops-w: 0.50;
+          --eyes-w: 0.38;
+          --nose-w: 0.38;
+          --feedback-w: 0.50;
+          --writing-w: 0.42;
+          --mouth-w: 0.44;
+          --about-w: 0.15;
+          --headshot-w: 0.09;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-paper text-ink m-0 p-0 overflow-hidden h-dvh flex items-center justify-center">
+    <div class="collage-page relative" style="width: var(--cw); aspect-ratio: var(--ratio); max-height: 100dvh;">
+
+      <!-- About + headshot — top right -->
+      <div class="absolute flex items-start gap-[0.5%]" style="top: var(--about-top); right: var(--about-right);">
+        <a href="/about/" class="collage-nav">
+          <img
+            src="/assets/about.png"
+            alt="about"
+            style="width: calc(var(--cw) * var(--about-w));"
+          />
+        </a>
+        <img
+          src="/assets/headshot.png"
+          alt="Portrait of Hana"
+          style="width: calc(var(--cw) * var(--headshot-w)); aspect-ratio: 87/109;"
+        />
+      </div>
+
+      <!-- Workshops -->
+      <a
+        href="/workshops/"
+        class="collage-nav absolute"
+        style="top: var(--workshops-top); left: var(--workshops-left); transform: rotate(-7.71deg);"
+      >
+        <img src="/assets/workshops.png" alt="workshops" style="width: calc(var(--cw) * var(--workshops-w));" />
+      </a>
+
+      <!-- Eyes -->
+      <img
+        src="/assets/eyes.png"
+        alt="eyes"
+        class="absolute"
+        style="top: var(--eyes-top); left: var(--eyes-left); width: calc(var(--cw) * var(--eyes-w)); aspect-ratio: 87/28;"
+      />
+
+      <!-- Nose -->
+      <img
+        src="/assets/nose.png"
+        alt="nose"
+        class="absolute"
+        style="top: var(--nose-top); left: var(--nose-left); width: calc(var(--cw) * var(--nose-w)); aspect-ratio: 145/51;"
+      />
+
+      <!-- Feedback -->
+      <a
+        href="/feedback/"
+        class="collage-nav absolute"
+        style="top: var(--feedback-top); left: var(--feedback-left); transform: rotate(-9.973deg);"
+      >
+        <img src="/assets/feedback.png" alt="feedback" style="width: calc(var(--cw) * var(--feedback-w));" />
+      </a>
+
+      <!-- Writing -->
+      <a
+        href="/writing/"
+        class="collage-nav absolute"
+        style="top: var(--writing-top); left: var(--writing-left); transform: rotate(12.792deg);"
+      >
+        <img src="/assets/writing.png" alt="writing" style="width: calc(var(--cw) * var(--writing-w));" />
+      </a>
+
+      <!-- Mouth -->
+      <img
+        src="/assets/mouth.png"
+        alt="mouth"
+        class="absolute"
+        style="top: var(--mouth-top); left: var(--mouth-left); width: calc(var(--cw) * var(--mouth-w)); aspect-ratio: 391/122;"
+      />
+    </div>
+  </body>
+</html>
