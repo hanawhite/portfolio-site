@@ -9,7 +9,7 @@ I am very happy to give feedback and notes on your short fiction.
 
 I have a particular eye for voice, energy, tension, character, dialogue and humour.
 
-If you would like me to read your work, please reach out at hello[at]hanawhite[dot]com
+If you would like me to read your work, please reach out at [hello@hanawhite.com](mailto:hello@hanawhite.com).
 
 ## Editing rates & turnaround times
 
