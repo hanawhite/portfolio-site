@@ -16,8 +16,11 @@ If you would like me to read your work, please reach out at [hello@hanawhite.com
 ### Short stories or novel extracts
 
 Up to 1,000 words: £80
-1,000 - 3,500 words: £120  
+
+1,000 - 3,500 words: £120
+
 3,500 - 5,500 words: £150
+
 Over 5,500 words: Priced individually
 
 ### Manuscripts
